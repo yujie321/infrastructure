@@ -4,8 +4,6 @@ import android.app.Application;
 import android.content.Context;
 
 import com.example.toollib.util.Utils;
-import com.liulishuo.filedownloader.FileDownloader;
-import com.liulishuo.filedownloader.connection.FileDownloadUrlConnection;
 
 /**
  * @author Administrator

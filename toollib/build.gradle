@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.jakewharton.butterknife'
 
 def libs = rootProject.ext.dependencies
@@ -43,22 +42,18 @@ dependencies {
     api libs["rxandroid"]
     api libs["rxbinding"]
     api libs["rxjava2-adapter"]
-    api libs["greendao"]
-    api libs["greendao-generator"]
     api libs["qmui"]
     api libs["qmui-arch"]
     api libs["design"]
     api libs["rxlifecycle-android"]
     api libs["glide"]
-    api libs["download"]
     api libs["SmartRefreshLayout"]
     api libs["SmartRefreshHeader"]
-    api libs["joda-time"]
     api libs["rxpermissions"]
     api libs["pickerView"]
     api libs["photoView"]
+    api libs["joda-time"]
     api libs["eventBus"]
     api libs["BaseRecyclerViewAdapterHelper"]
     api libs["multidex"]
-
 }

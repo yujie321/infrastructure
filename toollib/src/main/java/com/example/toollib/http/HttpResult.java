@@ -3,10 +3,7 @@ package com.example.toollib.http;
 
 import androidx.annotation.NonNull;
 
-import com.example.toollib.http.version.Version;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.Optional;
 
 
 public class HttpResult<T> {
@@ -19,9 +16,6 @@ public class HttpResult<T> {
 
     @SerializedName("resData")
     private T data ;
-
-    private Version version;
-
 
     public String getMsg() {
         return msg;
@@ -47,14 +41,6 @@ public class HttpResult<T> {
         this.data = data;
     }
 
-    public Version getVersion() {
-        return version;
-    }
-
-    public void setVersion(Version version) {
-        this.version = version;
-    }
-
     @NonNull
     @Override
     public String toString() {
@@ -62,7 +48,6 @@ public class HttpResult<T> {
                 "msg='" + msg + '\'' +
                 ", code='" + code + '\'' +
                 ", resData=" + data +
-                ", version=" + version +
                 '}';
     }
 }

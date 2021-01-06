@@ -8,15 +8,9 @@ import com.example.toollib.http.exception.ApiException;
 import com.example.toollib.http.exception.ExceptionHandle;
 import com.example.toollib.http.function.HttpResultFunction;
 import com.example.toollib.http.util.DialogUtil;
-import com.example.toollib.http.version.MessageEvent;
-import com.example.toollib.http.version.Version;
-import com.example.toollib.http.version.VersionEnums;
 import com.example.toollib.util.LoginInterceptor;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.lang.ref.WeakReference;
-import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
