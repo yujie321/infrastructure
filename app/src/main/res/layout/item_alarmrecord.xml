@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvAlarmType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="风速报警"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvAlarmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAlarmType"
+        android:text="2020-12-20 11:39:44"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvAlarmInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAlarmTime"
+        android:text="今天风很大"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvAlarmLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAlarmInfo"
+        android:text="杭州市余杭区人工智能小镇"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/imgChecked"
+        android:layout_width="76dp"
+        android:layout_height="62dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentRight="true"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>
