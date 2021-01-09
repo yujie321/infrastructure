@@ -1,102 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <!--顶部标题栏-->
     <com.qmuiteam.qmui.widget.QMUITopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/qmui_topbar_height"/>
+        android:layout_height="?attr/qmui_topbar_height" />
 
-    <TextView
-        android:id="@+id/tvAlarmType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="报警类型： "
-        android:layout_marginStart="3dp"
-        android:gravity="center_vertical"
-        android:textSize="20sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp">
 
-    <TextView
-        android:id="@+id/tvAlarmLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/tvAlarmType"
-        android:text="报警级别："
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvAlarmType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:text="报警类型： "
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tvAlarmTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/tvAlarmLevel"
-        android:text="报警时间： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvAlarmLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAlarmType"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警级别："
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tvAlarmInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvAlarmTime"
-        android:text="报警内容："
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvAlarmTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAlarmLevel"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警时间： "
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tvAlarmLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvAlarmInfo"
-        android:text="报警位置： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvAlarmInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlarmTime"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警内容："
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tvAlarmDevice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvAlarmLocation"
-        android:text="报警设备： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvAlarmLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlarmInfo"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警位置： "
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/tvBelong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvAlarmDevice"
-        android:text="所属项目： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/tvManger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvBelong"
-        android:text="管理人： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/tvPhoneNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/tvManger"
-        android:text="报警设备： "
-        android:layout_marginStart="3dp"
-        android:textSize="20sp"/>
-    </LinearLayout>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tvAlarmDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlarmLocation"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警设备： "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvBelong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlarmDevice"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="所属项目： "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvManger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBelong"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="管理人： "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvManger"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="10dp"
+            android:text="报警设备： "
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>

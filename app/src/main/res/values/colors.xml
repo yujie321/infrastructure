@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="tool_lib_color_FFFFFFFD">#FFFFFFFD</color>
+    <color name="tool_lib_color_2581C7">#2581C7</color>
+    <color name="tool_lib_color_FFFFFD">#FFFFFD</color>
 </resources>

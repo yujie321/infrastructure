@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!--主布局-->
-    <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -22,21 +23,21 @@
                 android:layout_weight="1">
 
                 <TextView
+                    android:id="@+id/test"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/test"
                     android:layout_marginStart="20dp"
                     android:text="项目信息"
-                    android:textSize="25dp"/>
+                    android:textSize="25dp" />
 
                 <TextView
+                    android:id="@+id/ttttt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ttttt"
                     android:layout_below="@id/test"
                     android:layout_marginStart="20dp"
                     android:text="太原分公司"
-                    android:textSize="25dp"/>
+                    android:textSize="25dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -44,7 +45,7 @@
                     android:layout_below="@id/ttttt"
                     android:layout_marginStart="20dp"
                     android:text="张三    132323232323"
-                    android:textSize="25dp"/>
+                    android:textSize="25dp" />
 
 
             </RelativeLayout>
@@ -60,42 +61,42 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:text="设备监控"
-                    android:textSize="25dp"/>
+                    android:textSize="25dp" />
 
                 <ImageView
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="50dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="100dp"
-                    android:text="3333"/>
+                    android:text="3333" />
 
                 <ImageView
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="250dp"
                     android:layout_marginTop="50dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
                 <ImageView
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="150dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
                 <ImageView
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="250dp"
                     android:layout_marginTop="150dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
             </RelativeLayout>
 
@@ -110,70 +111,58 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_marginBottom="10dp"
+                    android:src="@mipmap/ic_launcher" />
             </RelativeLayout>
+
         </LinearLayout>
 
-        <com.scwang.smartrefresh.layout.SmartRefreshLayout
-            android:id="@+id/refreshBaseList"
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F2F2F2"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:srlAccentColor="@android:color/white"
-            app:srlEnableHeaderTranslationContent="false"
-            app:srlEnableLoadMore="false"
-            app:srlPrimaryColor="@android:color/white">
+            android:layout_above="@+id/magic_indicator1" />
 
-            <com.scwang.smartrefresh.header.MaterialHeader
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true" />
 
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvBaseList"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-
-
-    </LinearLayout>
+    </RelativeLayout>
     <!--侧滑菜单-->
     <RelativeLayout
-      android:layout_width="180dp"
-      android:clickable="true"
-      android:layout_height="match_parent"
-      android:layout_gravity="left"
-      android:background="#fff">
-
-      <LinearLayout
-        android:id="@+id/ll_home_navigation_top"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:src="@mipmap/ic_launcher" />
-      </LinearLayout>
-
-      <ListView
-        android:id="@+id/lv_left_menu"
-        android:layout_below="@id/ll_home_navigation_top"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="match_parent"
-        android:divider="@null"
-        android:text="DrawerLayout" />
+        android:layout_gravity="left"
+        android:background="#fff"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/ll_home_navigation_top"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_home_navigation_top"
+            android:divider="@null"
+            android:text="DrawerLayout" />
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

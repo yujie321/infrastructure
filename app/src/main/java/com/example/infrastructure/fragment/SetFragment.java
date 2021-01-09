@@ -6,12 +6,14 @@ import com.example.infrastructure.R;
 import com.example.toollib.base.BaseFragment;
 import com.example.toollib.data.IBaseModule;
 
-public class RecordDetailFragment extends BaseFragment {
-    public static RecordDetailFragment newInstance() {
-        
+/**
+ * 设置
+ */
+public class SetFragment extends BaseFragment {
+
+    public static SetFragment newInstance() {
         Bundle args = new Bundle();
-        
-        RecordDetailFragment fragment = new RecordDetailFragment();
+        SetFragment fragment = new SetFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -28,16 +30,11 @@ public class RecordDetailFragment extends BaseFragment {
 
     @Override
     public int getContentView() {
-        return R.layout.fragment_record_detail;
+        return R.layout.fragment_set;
     }
 
     @Override
     protected String getActivityTitle() {
         return null;
-    }
-
-    @Override
-    public boolean isCustomView() {
-        return false;
     }
 }

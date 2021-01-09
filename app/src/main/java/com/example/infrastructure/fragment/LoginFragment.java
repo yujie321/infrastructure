@@ -56,4 +56,9 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
                 break;
         }
     }
+
+    @Override
+    public boolean isCustomView() {
+        return false;
+    }
 }

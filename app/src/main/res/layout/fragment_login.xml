@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login">
     
     <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="300dp"
-        android:hint="@string/please_input_user" />
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:id="@+id/etUser"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="261dp"
+        android:hint="@string/please_input_user"
+        android:textSize="14sp"
+        android:textColor="@color/tool_lib_color_FFFFFFFD"/>
 
     <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="400dp"
-        android:hint="@string/please_input_passwd" />
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:id="@+id/etPasswd"
+        android:layout_below="@+id/etUser"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/please_input_passwd"
+        android:textSize="14sp"
+        android:textColor="@color/tool_lib_color_FFFFFFFD"/>
 
     <com.qmuiteam.qmui.layout.QMUIButton
         android:id="@+id/btnLogin"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="412dp"
         android:text="登录"
-        android:textSize="25dp"
+        android:textSize="16sp"
+        android:textColor="@color/tool_lib_color_2581C7"
+        android:background="@color/tool_lib_color_FFFFFD"
         android:enabled="true"/>
 
 </RelativeLayout>
