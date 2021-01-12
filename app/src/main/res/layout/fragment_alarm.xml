@@ -5,20 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="AlarmFragment"
-        android:textSize="20sp" />
-
-
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshBaseList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        android:background="#F2F2F2"
+        android:background="@color/tool_lib_gray_FAFAFA"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:srlAccentColor="@android:color/white"
         app:srlEnableHeaderTranslationContent="false"
@@ -31,6 +22,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvBaseList"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

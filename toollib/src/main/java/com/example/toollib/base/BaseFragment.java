@@ -142,7 +142,7 @@ public abstract class BaseFragment<M extends IBaseModule> extends BaseRxFragment
     private void setTitle() {
         if (isCustomView() && topBarBase != null) {
             topBarBase.setTitle(getActivityTitle())
-                    .setTextColor(Color.BLACK);
+                    .setTextColor(Color.WHITE);
         }
     }
 

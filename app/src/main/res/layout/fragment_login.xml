@@ -12,8 +12,10 @@
         android:layout_marginEnd="40dp"
         android:layout_marginTop="261dp"
         android:hint="@string/please_input_user"
+        android:textColorHint="@color/tool_lib_white_FFFFFF"
+        android:textStyle="bold"
         android:textSize="14sp"
-        android:textColor="@color/tool_lib_color_FFFFFFFD"/>
+        android:textColor="@color/tool_lib_white_FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -24,6 +26,8 @@
         android:layout_marginEnd="40dp"
         android:layout_marginTop="25dp"
         android:hint="@string/please_input_passwd"
+        android:textColorHint="@color/tool_lib_white_FFFFFF"
+        android:textStyle="bold"
         android:textSize="14sp"
         android:textColor="@color/tool_lib_color_FFFFFFFD"/>
 
@@ -34,7 +38,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="412dp"
-        android:text="登录"
+        android:text="登 录"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:textColor="@color/tool_lib_color_2581C7"
         android:background="@color/tool_lib_color_FFFFFD"

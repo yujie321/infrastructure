@@ -13,7 +13,7 @@ public class InfrastructureApplication extends Application {
 
 
     //    public static final String BASE_URL = "http://192.168.3.2:8082/";
-    public static final String BASE_URL = "http://192.168.1.39:8082/microservice-pad/rest/";
+    public static final String BASE_URL = "http://116.63.53.193:8090";
 
     public static InfrastructureApplication getInstance() {
         return infrastructureApplication;

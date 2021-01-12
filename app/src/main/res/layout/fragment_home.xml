@@ -3,18 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tl_custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        app:collapsedTitleGravity="center"
+        android:background="#2295F6"
+        android:paddingTop="21dp"
         android:minHeight="?attr/actionBarSize"
+        android:gravity="center"
         android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:text="ToolbarTitle"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <include layout="@layout/drawerlayout" />
 

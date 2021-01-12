@@ -4,4 +4,15 @@
     <string name="close">close</string>
     <string name="please_input_user">请输入账号</string>
     <string name="please_input_passwd">请输入密码</string>
+    <string name="alarm_tpye">报警类型: %s</string>
+    <string name="alarm_level">报警级别: %s</string>
+    <string name="alarm_time">报警时间: %s</string>
+    <string name="alarm_info">报警信息: %s</string>
+    <string name="alarm_location">报警位置: %s</string>
+    <string name="alarm_device">报警设备: %s</string>
+    <string name="alarm_belong">所属项目: %s</string>
+    <string name="alarm_manger">联系人: %s</string>
+    <string name="phone_num">电话号码: %s</string>
+    <string name="angle_data">X:%s Y:%s</string>
+    <string name="wind_speed">%s km/s</string>
 </resources>

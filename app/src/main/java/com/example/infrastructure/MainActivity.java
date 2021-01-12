@@ -1,6 +1,8 @@
 package com.example.infrastructure;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.MotionEvent;
@@ -8,16 +10,19 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.example.infrastructure.service.WebSocketService;
 import com.example.toollib.base.BaseActivity;
 import com.qmuiteam.qmui.arch.QMUIFragment;
 import com.example.infrastructure.fragment.SplashFragment;
 
 public class MainActivity extends BaseActivity {
 
+    private Intent webSocketService;
     @Override
     public int getContextViewId() {
         return R.layout.activity_main;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,12 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             init(SplashFragment.newInstance());
+        }
+        webSocketService = new Intent(MainActivity.this, WebSocketService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(webSocketService);
+        } else {
+            startService(webSocketService);
         }
     }
 
@@ -76,4 +87,9 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        stopService(webSocketService);
+        super.onDestroy();
+    }
 }

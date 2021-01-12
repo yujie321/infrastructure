@@ -2,9 +2,9 @@
 <resources>
 
     <!--Appbar背景色-->
-    <color name="tool_lib_colorPrimary">#FFFFFF</color>
+    <color name="tool_lib_colorPrimary">#2295F6</color>
     <!--状态栏颜色-->
-    <color name="tool_lib_colorPrimaryDark">#FFFFFF</color>
+    <color name="tool_lib_colorPrimaryDark">#2295F6</color>
     <!--控制各个控件被选中时的颜色-->
     <color name="tool_lib_colorAccent">#FFFFFF</color>
 
@@ -20,6 +20,7 @@
     <color name="tool_lib_gray_F9F9F9">#F9F9F9</color>
     <color name="tool_lib_gray_F5F8FA">#F5F8FA</color>
     <color name="tool_lib_gray_F5F6FA">#F5F6FA</color>
+    <color name="tool_lib_gray_FAFAFA">#FAFAFA</color>
     <color name="tool_lib_gray_F1F1F1">#F1F1F1</color>
     <color name="tool_lib_gray_C9C9C9">#c9c9c9</color>
     <color name="tool_lib_gray_D8D8D8">#D8D8D8</color>
@@ -40,6 +41,7 @@
 
     <color name="tool_lib_blue_287CDF">#287CDF</color>
     <color name="tool_lib_blue_0091FF">#0091FF</color>
+    <color name="tool_lib_blue_2295F6">#2295F6</color>
     <color name="tool_lib_orange_F4702C">#F4702C</color>
 
     <color name="tool_lib_yellow_FFC619">#FFC619</color>
@@ -55,6 +57,7 @@
     <color name="tool_lib_color_FFEDEB">#FFEDEB</color>
     <color name="tool_lib_color_F4F9FF">#F4F9FF</color>
     <color name="tool_lib_color_CCCED3">#CCCED3</color>
+    <color name="tool_lib_color_A5A5A5">#A5A5A5</color>
     <color name="tool_lib_color_2D3141">#2D3141</color>
     <color name="tool_lib_color_404352">#404352</color>
     <color name="tool_lib_color_32313E">#32313E</color>
@@ -110,6 +113,7 @@
     <color name="tool_lib_color_767676">#767676</color>
     <color name="tool_lib_color_FFB400">#FFB400</color>
     <color name="tool_lib_color_757575">#757575</color>
+    <color name="tool_lib_color_CCCCCC">#CCCCCC</color>
     <color name="tool_lib_color_cc0101">#cc0101</color>
     <color name="tool_lib_color_959595">#959595</color>
     <color name="tool_lib_color_FF9000">#FF9000</color>
@@ -118,5 +122,6 @@
     <color name="tool_lib_color_0EC274">#0EC274</color>
     <color name="tool_lib_color_E09C08">#E09C08</color>
     <color name="tool_lib_color_00C6FF">#00C6FF</color>
+    <color name="tool_lib_color_0B0C0D">#0B0C0D</color>
 
 </resources>

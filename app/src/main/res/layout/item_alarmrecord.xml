@@ -1,68 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="15dp"
+    android:background="@color/qmui_config_color_white"
+    app:qmui_showBorderOnlyBeforeL="true">
 
-    <ImageView
-        android:id="@+id/imgAlarmType"
-        android:layout_width="51dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="14dp"
-        android:src="@mipmap/ic_launcher"
-        />
-
-    <TextView
-        android:id="@+id/tvAlarmType"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="当前风速 5km/s 超过报警值 2km/s"
-        android:textColor="#ff0b0c0d"
-        android:textSize="14sp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center_vertical" />
+        android:background="@color/qmui_config_color_white">
 
-    <TextView
-        android:id="@+id/tvAlarmTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvAlarmType"
-        android:text="山西省太原市杏花岭区xxx路180号（2Y56）"
-        android:textColor="#ff0b0c0d"
-        android:textSize="12sp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="6dp" />
+        <ImageView
+            android:id="@+id/imgAlarmType"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:src="@mipmap/ic_wind" />
 
-    <ImageView
-        android:id="@+id/imgAlarmLevel"
-        android:layout_width="48dp"
-        android:layout_height="15dp"
-        android:layout_below="@+id/tvAlarmTime"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/ic_launcher"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="19dp"
+            android:layout_toEndOf="@+id/imgAlarmType"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAlarmInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#ff0b0c0d"
+                android:textSize="14sp"
+                tools:text="当前风速 5km/s 超过报警值 2km/s" />
+
+            <TextView
+                android:id="@+id/tvAlarmLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#ff0b0c0d"
+                android:textSize="12sp"
+                tools:text="山西省太原市杏花岭区xxx路180号（2Y56）" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imgAlarmLevel"
+                    android:layout_width="48dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_alarmlevel4" />
+
+                <TextView
+                    android:id="@+id/tvAlarmType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:textColor="#ff0b0c0d"
+                    android:textSize="10sp"
+                    tools:text="风速报警" />
+
+                <TextView
+                    android:id="@+id/tvAlarmTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:textSize="10sp"
+                    tools:text="2020" />
+            </LinearLayout>
+        </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/tvAlarmInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvAlarmTime"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="8dp"
-        android:text="风速报警"
-        android:textColor="#ff0b0c0d"
-        android:textSize="10sp" />
-
-    <TextView
-        android:id="@+id/tvAlarmLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvAlarmTime"
-        android:text="杭州"
-        android:layout_marginStart="198dp"
-        android:layout_marginTop="8dp"
-        android:textSize="10sp"/>
-
-</RelativeLayout>
+    </RelativeLayout>
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

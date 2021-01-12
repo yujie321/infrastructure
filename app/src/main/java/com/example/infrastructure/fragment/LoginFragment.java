@@ -3,9 +3,7 @@ package com.example.infrastructure.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.infrastructure.R;
-import com.example.infrastructure.data.AlarmRecordVo;
 import com.example.toollib.base.BaseFragment;
 import com.example.toollib.data.IBaseModule;
 import com.qmuiteam.qmui.layout.QMUIButton;

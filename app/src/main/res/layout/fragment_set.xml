@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    
+    <ImageView
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="137dp"
+        android:src="@mipmap/bg_mine"/>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX管理员"
+        android:layout_marginTop="224dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff0b0c0d"
+        android:textSize="14sp"
+        />
+
+    <com.qmuiteam.qmui.layout.QMUIButton
+        android:id="@+id/btnExit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="SetFragment"
-        android:textSize="20sp" />
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="280dp"
+        android:text="退 出"
+        android:textSize="16sp"
+        android:textColor="@color/tool_lib_color_FFFFFD"
+        android:background="#2295F6"
+        android:enabled="true"/>
+
 </RelativeLayout>

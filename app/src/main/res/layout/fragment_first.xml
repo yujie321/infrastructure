@@ -1,14 +1,490 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/qmui_config_color_white">
+    android:layout_height="wrap_content"
+    android:background="@color/tool_lib_gray_FAFAFA">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="first"
-        android:textSize="20sp" />
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp">
 
-</RelativeLayout>
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:id="@+id/layout_for_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="23dp"
+            app:qmui_showBorderOnlyBeforeL="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:text="项目信息"
+                        android:textColor="@color/tool_lib_color_0B0C0D"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/viewLine"
+                        style="@style/tool_lib_vertical_line"
+                        android:layout_height="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/test" />
+
+                    <TextView
+                        android:id="@+id/tvAlarminfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_toStartOf="@+id/imgAlarmRisk"
+                        android:layout_toEndOf="@+id/viewLine"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="马庄~王家峰11kV线路工程"
+                        android:textColor="@color/tool_lib_color_0B0C0D"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imgAlarmRisk"
+                        android:layout_width="66dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_alarmrisk4" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="55dp"
+                    android:text="太原分公司"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="59dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="负责人"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="179dp"
+                    android:layout_marginTop="55dp"
+                    android:text="135525255555"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPhoneNum"
+                    android:layout_marginStart="202dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="联系方式"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="设备监控"
+            android:textColor="#ff0b0c0d"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:id="@+id/linearWind"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@color/qmui_config_color_white"
+                android:orientation="vertical"
+                app:qmui_showBorderOnlyBeforeL="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/relWind"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:text="实时风向"
+                            android:textColor="#ff0b0c0d"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/viewWindLine"
+                            style="@style/tool_lib_vertical_line"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvWindDirection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="东北风"
+                            android:textColor="@color/tool_lib_color_0B0C0D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="39dp"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/relWind"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginBottom="14dp"
+                        android:src="@drawable/ic_wind_one" />
+                </RelativeLayout>
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:id="@+id/linearWindSpeed"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@color/qmui_config_color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/layWindSpeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:text="实时风速"
+                            android:textColor="#ff0b0c0d"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/viewWindSpeedLine"
+                            style="@style/tool_lib_vertical_line"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvWindSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="1km/s"
+                            android:textColor="@color/tool_lib_color_0B0C0D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layWindSpeed"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="3dp"
+                            android:src="@drawable/circular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text=" 预警值 2km/s"
+                            android:textColor="@color/tool_lib_color_A5A5A5"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivWindLevel"
+                        android:layout_width="39dp"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/layWindSpeed"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginBottom="14dp"
+                        android:src="@drawable/ic_wind_speed_one" />
+                </RelativeLayout>
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:id="@+id/layoutPull"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@color/qmui_config_color_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:qmui_showBorderOnlyBeforeL="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/layPull"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:text="实时拉力"
+                            android:textColor="#ff0b0c0d"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/viewPullLine"
+                            style="@style/tool_lib_vertical_line"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="2t"
+                            android:textColor="@color/tool_lib_color_0B0C0D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layPull"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="3dp"
+                            android:src="@drawable/circular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text=" 预警值 3t"
+                            android:textColor="@color/tool_lib_color_A5A5A5"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivPullLevel"
+                        android:layout_width="39dp"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/layPull"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginBottom="14dp"
+                        android:src="@drawable/ic_pull_one" />
+                </RelativeLayout>
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:id="@+id/layoutAngle"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@color/qmui_config_color_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:qmui_showBorderOnlyBeforeL="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/layAngle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:text="实时倾角"
+                            android:textColor="#ff0b0c0d"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/viewAngleLine"
+                            style="@style/tool_lib_vertical_line"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvAngleData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="X:15° Y:10°"
+                            android:textColor="@color/tool_lib_color_0B0C0D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layAngleX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layAngle"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/circular" />
+
+                        <TextView
+                            android:id="@+id/tvAngleX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:text="预警值 X:20°"
+                            android:textColor="@color/tool_lib_color_A5A5A5"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAngle"
+                        android:layout_width="39dp"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/layAngle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginBottom="14dp"
+                        android:src="@drawable/ic_angle_one" />
+                </RelativeLayout>
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="159dp"
+            android:layout_marginTop="19dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_electronic_fence" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
