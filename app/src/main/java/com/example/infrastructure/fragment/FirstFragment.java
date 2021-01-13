@@ -10,6 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.infrastructure.R;
 import com.example.infrastructure.data.AlarmInfo;
 import com.example.infrastructure.data.AngleData;
+import com.example.infrastructure.data.BaseStation;
 import com.example.infrastructure.data.GiveAnAlarmTypeEnum;
 import com.example.infrastructure.data.LocationData;
 import com.example.infrastructure.data.TotalData;
@@ -19,6 +20,7 @@ import com.example.toollib.base.BaseFragment;
 import com.example.toollib.data.IBaseModule;
 import com.example.toollib.data.base.BaseCallback;
 import com.example.toollib.http.HttpResult;
+import com.example.toollib.http.observer.BaseHttpRxObserver;
 import com.example.toollib.http.observer.BaseHttpZipRxObserver;
 import com.example.toollib.http.util.RxUtils;
 import com.example.toollib.util.AmountUtil;
@@ -29,6 +31,9 @@ import com.qmuiteam.qmui.util.QMUIDisplayHelper;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.List;
+
 import butterknife.BindView;
 import io.reactivex.Observable;
 import io.reactivex.functions.BiFunction;
@@ -100,6 +105,18 @@ public class FirstFragment extends BaseFragment {
         EventBus.getDefault().register(this);
 
         getData();
+        getBaseStation();
+    }
+
+    private void getBaseStation() {
+        RxUtils.getObservable(ServiceUrl.getUserApi().getBaseStation())
+                .compose(bindToLifecycle())
+                .subscribe(new BaseHttpRxObserver<List<BaseStation>>(getContext()) {
+                    @Override
+                    protected void onSuccess(List<BaseStation> baseStationList) {
+                        int ccc = 0;
+                    }
+                });
     }
 
     private void getData() {
@@ -156,12 +173,12 @@ public class FirstFragment extends BaseFragment {
 
     private void setWind(WindData windData) {
         tvWindDirection.setText(windData.getWindDirectionName());
-        tvWindSpeed.setText(getString(R.string.wind_speed, String.valueOf(AmountUtil.getDoubleValue(windData.getWindSpeed() , 2))));
+        tvWindSpeed.setText(getString(R.string.wind_speed, String.valueOf(AmountUtil.getDoubleValue(windData.getWindSpeed() , 1))));
     }
 
     private void setAngle(AngleData angleData) {
-        tvAngleData.setText(getString(R.string.angle_data, String.valueOf(AmountUtil.getDoubleValue(angleData.getXAngle() , 2)),
-                String.valueOf(AmountUtil.getDoubleValue(angleData.getYAngle() , 2))));
+        tvAngleData.setText(getString(R.string.angle_data, String.valueOf(AmountUtil.getDoubleValue(angleData.getXAngle() , 1)),
+                String.valueOf(AmountUtil.getDoubleValue(angleData.getYAngle() , 1))));
 
     }
 
@@ -173,15 +190,19 @@ public class FirstFragment extends BaseFragment {
             switch (giveAlarmLevel){
                 case 4:
                     ivWindLevel.setImageResource(R.mipmap.ic_windlevel1);
+                    tvWindSpeed.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_0CAF36));
                     break;
                 case 3:
                     ivWindLevel.setImageResource(R.mipmap.ic_windlevel2);
+                    tvWindSpeed.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_FFB10B));
                     break;
                 case 2:
                     ivWindLevel.setImageResource(R.mipmap.ic_windlevel3);
+                    tvWindSpeed.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_F75100));
                     break;
                 case 1:
                     ivWindLevel.setImageResource(R.mipmap.ic_windlevel4);
+                    tvWindSpeed.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_E7220A));
                     break;
                 default:
                     break;
@@ -190,15 +211,19 @@ public class FirstFragment extends BaseFragment {
             switch (giveAlarmLevel){
                 case 4:
                     ivAngle.setImageResource(R.mipmap.ic_anglelevel1);
+                    tvAngleData.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_0CAF36));
                     break;
                 case 3:
                     ivAngle.setImageResource(R.mipmap.ic_anglelevel2);
+                    tvAngleData.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_FFB10B));
                     break;
                 case 2:
                     ivAngle.setImageResource(R.mipmap.ic_anglelevel3);
+                    tvAngleData.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_F75100));
                     break;
                 case 1:
                     ivAngle.setImageResource(R.mipmap.ic_anglelevel4);
+                    tvAngleData.setTextColor(getContext().getResources().getColor(R.color.tool_lib_color_E7220A));
                     break;
                 default:
                     break;

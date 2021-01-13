@@ -112,7 +112,7 @@ public abstract class BaseHttpRxObserver<T> implements Observer<HttpResult<T>>, 
      */
     public void onError(ApiException apiException) {
         boolean flag = LoginInterceptor.tokenReLogin(apiException);
-        if (!flag) {
+        if (true) {
             ToastUtil.showShort(apiException.getMsg());
         }
     }

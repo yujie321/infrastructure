@@ -126,7 +126,7 @@ public class HomeFragment extends BaseFragment {
 
     private void getProject() {
         RxUtils.getObservable(ServiceUrl.getUserApi().getProjectList(1, 30))
-                .subscribe(new BaseHttpRxObserver<List<Project>>(getContext()) {
+                .subscribe(new BaseHttpRxObserver<List<Project>>() {
                     @Override
                     protected void onSuccess(List<Project> projectList) {
                         if (projectList == null) {

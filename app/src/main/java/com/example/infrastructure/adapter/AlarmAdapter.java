@@ -47,22 +47,7 @@ public class AlarmAdapter extends BaseQuickAdapter<AlarmInfo, BaseViewHolder> im
                     break;
             }
         } else if(giveAnAlarmId == GiveAnAlarmTypeEnum.UWB_TYPE_ID.getId()) {
-            switch (giveAlarmLevel){
-                case 4:
-                    imgAlarmType.setImageResource(R.mipmap.ic_pulllevel1);
-                    break;
-                case 3:
-                    imgAlarmType.setImageResource(R.mipmap.ic_pulllevel2);
-                    break;
-                case 2:
-                    imgAlarmType.setImageResource(R.mipmap.ic_pulllevel3);
-                    break;
-                case 1:
-                    imgAlarmType.setImageResource(R.mipmap.ic_pulllevel4);
-                    break;
-                default:
-                    break;
-            }
+            imgAlarmType.setImageResource(R.mipmap.ic_rail);
         }  else if(giveAnAlarmId == GiveAnAlarmTypeEnum.INCLINATION_SENSOR_TYPE_ID.getId()) {
             switch (giveAlarmLevel){
                 case 4:

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">infrastructure</string>
+    <string name="app_name">现场管控微应用</string>
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="please_input_user">请输入账号</string>
@@ -14,5 +14,5 @@
     <string name="alarm_manger">联系人: %s</string>
     <string name="phone_num">电话号码: %s</string>
     <string name="angle_data">X:%s Y:%s</string>
-    <string name="wind_speed">%s km/s</string>
+    <string name="wind_speed">%s m/s</string>
 </resources>

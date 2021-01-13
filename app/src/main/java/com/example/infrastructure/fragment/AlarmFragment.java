@@ -89,7 +89,6 @@ public class AlarmFragment extends BaseListFragment {
 
     private void setAlarmInfo(Alarm alarm) {
         if (alarm.getList().size() != 0) {
-            Log.e("dsd " + alarm.getList().size());
             alarmAdapter.setList(alarm.getList());
         }
     }
@@ -143,5 +142,11 @@ public class AlarmFragment extends BaseListFragment {
         if (topic == 2) {
             getAlarmInfo();
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }

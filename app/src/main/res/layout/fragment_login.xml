@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bg_login">
-    
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:id="@+id/etUser"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="261dp"
-        android:hint="@string/please_input_user"
-        android:textColorHint="@color/tool_lib_white_FFFFFF"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:textColor="@color/tool_lib_white_FFFFFF"/>
 
     <EditText
+        android:id="@+id/editUserNumber"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:id="@+id/etPasswd"
-        android:layout_below="@+id/etUser"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="261dp"
         android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_frame"
+        android:hint="@string/please_input_user"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/tool_lib_white_FFFFFF"
+        android:textColorHint="@color/tool_lib_color_B7D7FB"
+        android:textSize="14sp" />
+
+    <com.example.toollib.weight.PasswordEditText
+        android:id="@+id/editUserPass"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/editUserNumber"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_frame"
         android:hint="@string/please_input_passwd"
-        android:textColorHint="@color/tool_lib_white_FFFFFF"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:textColor="@color/tool_lib_color_FFFFFFFD"/>
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/tool_lib_white_FFFFFF"
+        android:textColorHint="@color/tool_lib_color_B7D7FB"
+        android:textSize="14sp" />
 
     <com.qmuiteam.qmui.layout.QMUIButton
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        style="@style/base_btn"
         android:layout_marginTop="412dp"
+        android:layout_marginEnd="40dp"
         android:text="登 录"
-        android:textStyle="bold"
-        android:textSize="16sp"
         android:textColor="@color/tool_lib_color_2581C7"
-        android:background="@color/tool_lib_color_FFFFFD"
-        android:enabled="true"/>
+        android:textSize="16sp" />
 
 </RelativeLayout>

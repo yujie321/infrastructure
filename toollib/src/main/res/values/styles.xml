@@ -23,6 +23,12 @@
 
     </style>
 
+    <!--密码输入框-->
+    <declare-styleable name="PasswordEditText">
+        <attr name="openPasswdRes" format="reference" />
+        <attr name="closePasswdRes" format="reference" />
+    </declare-styleable>
+
     <style name="tool_lib_QDTopBar" parent="QMUI.TopBar">
         <item name="qmui_topbar_height">48dp</item>
         <item name="qmui_topbar_image_btn_height">48dp</item>
