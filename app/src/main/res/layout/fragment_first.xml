@@ -338,7 +338,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="4dp"
-                            android:text="2t"
+                            android:text="0t"
                             android:textColor="@color/tool_lib_color_0B0C0D"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -476,17 +476,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="159dp"
+            android:layout_height="160dp"
             android:layout_marginTop="19dp">
 
-            <ImageView
+            <com.example.infrastructure.data.FenceView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@mipmap/ic_electronic_fence" />
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </LinearLayout>
